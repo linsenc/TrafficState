@@ -9,11 +9,45 @@ Detailed background information is included in my thesis, where we combine model
 
 # Data
 
-Data include the link travel time of a number of road sections. A road section is defined as the section of a road between two intersections. In this work, we have 63 roads, therefore, the dimension of feature space is 63. We have 350 data observations from seven groups. Data dimension is 350*63.
+Data include the link travel time of a number of road sections. A road section is defined as the section of a road between two intersections. In this work, we have 63 roads, therefore, the dimension of feature space is 63. 
+
+Please note that the data are pre-cleaned in this research. In real world, the data munging part should take a significant amount of time and would be absolute key in machine learning pipeline.
 
 # Models
 We used three machine learning models, decision trees, random forest and k nearest neighbors. The reason of using decision trees and random forest is because we expect a non-linear relationship between features and estimators. For k nearest neighbors, we believe it makes "transportation sense": since traffic from different scenarios (an off peak scenarion and a peak scenario) should behavior differently, data from the same class should have close distance, and vice versa.
 
-# Algorithm step
-## Proprocessing
+Please note that we have tried other models, e.g., logitics regression and SVM. The perform inferior and not included here.  
+
+
+# Algorithm steps
+## Preprocessing and feature engineering
+
+This step is crucial and should check several things including but not limited to:
+--Data size
+--Missing values and anomaly
+--Correlations between features
+--Multicolinearity 
+--Interaction terms
+
+Note that  data size, non-numeric features, the distributions of class are not included in this step because the data we get can fit into my laptop, traffic data are all numeric, and samples of each class are roughly even. However, for gee
+
+In addition, business-driven features are equally important. This will determine which features should (or should not) be included. For instance, if none of the models perform well, despite of parameters fine-turning, if could be the fact the key features are not included in the feature space. In this project, we have data of a limited number of roads, we do not know the data of all the roads of the cities of our interest. Therefore, we are better off with data of the full network. Note that in my thesis, the sparse data are compensated by a mathematical traffic model which can handle sparse data.
+
+
+1) Feature dimension reduction through 1) Linear discriminant analysis (LDA) and 2) Principle component analysis (PCA)
+
+
+2) Normalization: this is critical to the K nearest neighbor algorithm, because the unit of . This is inspired by the work of Anderson (2015), which is a problem specific technique and has been used to address traffic signal control problems. 
+
+Please note that for the sake of illustration, the choice of LDA/PCA parameters and normalization parameters should be done by cross-validation
+
+## Modeling building and selection
+1.Try a number of nodels,training and validation
+
+4) Ensemble models
+
+
+
+
+
 
