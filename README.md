@@ -31,11 +31,11 @@ This step is crucial and should check several things including but not limited t
 
 Note that data size, non-numeric features, the distributions of class screening are not included in this step because the data we get can fit into my laptop, traffic data are all numeric, and samples of each class are roughly even. However, these screening steps should be done for general ML problems.
 
-In this project, checking correlations between features is the key. This makes sense, because traffic conditions on adjacent roads are indeed correlated. This makes us think the features of several neighoring roads are indeed telling the same story: if congestion happens some region, the roads in the region are equally affected. In our case, feature correlation is the key and brings improvement in model performance. 
+In this project, checking correlations between features is the key. This makes sense, because traffic conditions on adjacent roads are indeed correlated. This makes us think the features of several neighoring roads are indeed telling the same story: if congestion happens some region, the roads in the region are equally affected. In our case, feature engineering is the key and brings improvement in model performance. 
 
 In addition, business-driven features are equally important. This will determine which features should (or should not) be included. For instance, if none of the models perform well, despite of parameters fine-turning, if could be the fact the key features are not included in the feature space. In this project, we have data of a limited number of roads, we do not know the data of all the roads of the cities of our interest. Therefore, we are better off with data of the full road network. Note that in my thesis, the sparse data issue does not pose a significant problem because we also use a mathematical traffic model which can help "guess" data from roads where data are missing.
 
-1) Feature dimension reduction through 1) Linear discriminant analysis (LDA) and 2) Principle component analysis (PCA). LDA 
+We use feature diemnsion and normalization techniques to preprocess the features. For feature dimension reduction, we have tried 1) Linear discriminant analysis (LDA) and 2) Principle component analysis (PCA). Where PCA is an unsupervised way of feature reduction, LDA technique requires the knowledge of class label. LDA helps to find projection vectors that maximize the inter class variances while minimize the intra class varirances. In our case, LDA is critical in improving model performances.
 
 
 2) Normalization: this is critical to the K nearest neighbor algorithm, because the unit of . This is inspired by the work of Anderson (2015), which is a problem specific technique and has been used to address traffic signal control problems. 
@@ -45,7 +45,7 @@ Please note that for the sake of illustration, the choice of LDA/PCA parameters 
 ## Modeling building and selection
 1.Try a number of nodels,training and validation
 
-4) Ensemble models
+## Ensemble models
 
 
 
