@@ -37,7 +37,7 @@ In addition, business-driven features are equally important. This will determine
 
 We use feature diemnsion and normalization techniques to preprocess the features. For feature dimension reduction, we have tried 1) Linear discriminant analysis (LDA) and 2) Principle component analysis (PCA). Where PCA is an unsupervised way of feature reduction, LDA technique requires the knowledge of class label. LDA helps to find projection vectors that maximize the inter class variances while minimize the intra class varirances. In our case, LDA is critical in improving model performances.
 
-For normalization, this work normalizes the reduced feature into bounded integers. This is a traffic control problem specific normalization technique, in order to configuration traffic control hardware. Nonetheless, normalization is proved to be crucial to the K nearest neighbor algorithm, as the unit of features does matter to compute the distance. This noramlization technique is inspired by the work of Anderson (2015). 
+For normalization, this work normalizes the reduced feature into bounded integers [0,M]. This is a traffic control problem specific normalization technique, in order to configuration traffic control hardware. Nonetheless, normalization is proved to be crucial to the K nearest neighbor algorithm, as the unit of features does matter to compute the distance. This noramlization technique is inspired by the work of Anderson (2015). 
 
 ##Write LDA/PCA and normalization equations here.
 
