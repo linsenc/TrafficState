@@ -46,11 +46,10 @@ Try a number of nodels, and then work stardardized training and cross-validation
 
 The cross-validation process is setup with the grid-search package of sklearn with the goal of finding a better parameter grid. In this work, we do exhaustive grid search because the computational requirement is not heavy. However, for large dataset, randomized parameter optimization is preferred. 
 
-In the .py file, we showcase the model building and cross-validation using decision trees, random forest and KNN.
+In the .py file, we showcase the model building and cross-validation using decision trees, random forest and KNN. 
 
-## Try ensemble 
-The final step of this work to ensemble good models with corresponding parameters. The goal is to develop en ensemble of a diversity of good models.
-
+## Ensemble 
+The final step of this work to ensemble good models with corresponding parameters. The goal is to develop en ensemble of a diversity of good models. In this work, we use the majority vote of decision trees, random forest and KNN.
 
 
 
