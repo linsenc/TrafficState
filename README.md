@@ -51,6 +51,5 @@ In the .py file, we showcase the model building and cross-validation using decis
 ## Ensemble 
 The final step of this work to ensemble good models with corresponding parameters. The goal is to develop en ensemble of a diversity of good models. In this work, we use the majority vote of decision trees, random forest and KNN.
 
-
-
+This is a brief discription of the data-drive machine learning models we've developed. I haven't listed all the technical details and results of the algorithms. The latter is included in the .pdf file.
 
