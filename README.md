@@ -24,7 +24,7 @@ Please note that we have tried other models, e.g., logitics regression and SVM. 
 
 This step is crucial and should check several things including but not limited to:
 --Data size
---Missing values and anomaly
+--Missing values (how to impute) and anomaly
 --Correlations between features
 --Multicolinearity 
 --Interaction terms
