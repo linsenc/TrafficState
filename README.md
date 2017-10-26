@@ -39,13 +39,17 @@ We use feature diemnsion and normalization techniques to preprocess the features
 
 For normalization, this work normalizes the reduced feature into bounded integers [0,M]. This is a traffic control problem specific normalization technique, in order to configuration traffic control hardware. Nonetheless, normalization is proved to be crucial to the K nearest neighbor algorithm, as the unit of features does matter to compute the distance. This noramlization technique is inspired by the work of Anderson (2015). 
 
-Lastly, the parameters of LDA/PCA, i.e., the number of eigenvectors, and and the number M used by the normalziation step needed to be choosen by cross-validation. That is, the choice of LDA/PCA parameter and the choice of machine learning model parameters should be done simulteanously. i.e., We compare the performance of a machine learning model under the choice of LDA projection vectors, where we find the best machine learning model and the best PDA dimension through the same cross-validation process. 
+Lastly, the parameters of LDA/PCA, i.e., the number of eigenvectors, and and the number M used by the normalziation step needed to be choosen by cross-validation. That is, the choice of LDA/PCA parameter and the choice of machine learning model parameters should be done simulteanously. i.e., We compare the performance of a machine learning model under the choice of LDA projection vectors, where we find the best machine learning model and the best LDA/PCA dimension together (we treat LDA dimension parameter as a parameter of a machine learning model) through the same cross-validation process. 
 
-## Modeling building and selection
-1.Try a number of nodels,training and validation
+## Modeling building and cross validation
+Try a number of nodels, and then work stardardized training and cross-validation process. The model evaluation metric we look at is the the evaluation metric is the misclassification rate. 
 
-## Ensemble models
+The cross-validation process is setup with the grid-search package of sklearn with the goal of finding a better parameter grid. In this work, we do exhaustive grid search because the computational requirement is not heavy. However, for large dataset, randomized parameter optimization is preferred. 
 
+In the .py file, we showcase the model building and cross-validation using decision trees, random forest and KNN.
+
+## Try ensemble 
+The final step of this work to ensemble good models with corresponding parameters. The goal is to develop en ensemble of a diversity of good models.
 
 
 
