@@ -39,9 +39,7 @@ We use feature diemnsion and normalization techniques to preprocess the features
 
 For normalization, this work normalizes the reduced feature into bounded integers [0,M]. This is a traffic control problem specific normalization technique, in order to configuration traffic control hardware. Nonetheless, normalization is proved to be crucial to the K nearest neighbor algorithm, as the unit of features does matter to compute the distance. This noramlization technique is inspired by the work of Anderson (2015). 
 
-##Write LDA/PCA and normalization equations here.
-
-Please note that for the sake of illustration, the choice of LDA/PCA parameters and normalization parameters should be done by cross-validation. We did not include in the .py file
+Lastly, the parameters of LDA/PCA, i.e., the number of eigenvectors, and and the number M used by the normalziation step needed to be choosen by cross-validation. That is, the choice of LDA/PCA parameter and the choice of machine learning model parameters should be done simulteanously. i.e., We compare the performance of a machine learning model under the choice of LDA projection vectors, where we find the best machine learning model and the best PDA dimension through the same cross-validation process. 
 
 ## Modeling building and selection
 1.Try a number of nodels,training and validation
