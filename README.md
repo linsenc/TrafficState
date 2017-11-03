@@ -11,6 +11,8 @@ Detailed background information is included in my thesis, where we combine model
 
 The data include the link travel time of a number of road sections. A road section is defined as the section of a road between two intersections. In this work, we have 63 roads, therefore, the dimension of feature space is 63. 
 
+The data are stored in sqlite database. We use SQL queries to get the road sensor data of our interest. An example of the query is included as an ipython notebook file in this repository.
+
 Please note that the data are pre-cleaned in this research. In real world, the data munging part should take a significant amount of time and would be absolute key in machine learning model pipeline.
 
 ## Models
